@@ -1,3 +1,4 @@
+# Importar el módulo pyplot con el alias plt
 import matplotlib.pyplot as plt
 
 # Datos predeterminados de los estudiantes

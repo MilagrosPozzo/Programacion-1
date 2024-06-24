@@ -1,3 +1,4 @@
+# Importar el módulo pyplot con el alias plt
 import matplotlib.pyplot as plt
 from collections import Counter
 
@@ -9,7 +10,6 @@ estudiantes = [
     {"nombre": "Carro, Agustín", "calificaciones": [3, 5, 6, 4, 7]},
     {"nombre": "Noy, Antonhy", "calificaciones": [6, 6, 7, 8, 9]}
 ]
-
 
 def grafico_barras_notas(estudiantes):
     # Recopilar todas las notas en una lista
