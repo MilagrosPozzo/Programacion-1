@@ -1,3 +1,7 @@
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Suponemos que ya tenemos definida la lista 'estudiantes'
 # Inicializar una lista para almacenar los datos de los estudiantes
 estudiantes = [
     {"nombre": "Arriola, María", "calificaciones": [10, 8, 6, 10, 9]},
@@ -6,25 +10,30 @@ estudiantes = [
     {"nombre": "Noy, Antonhy", "calificaciones": [6, 6, 7, 8, 9]}
 ]
 
-# Gráfico de barras
-import matplotlib.pyplot as plt
 
-from collections import Counter
-
-def grafico_barras_notas(notas):
-    contador = Counter(notas)
-    notas_unicas = list(contador.keys())
+def grafico_barras_notas(estudiantes):
+    # Recopilar todas las notas en una lista
+    todas_las_notas = [nota for estudiante in estudiantes for nota in estudiante['calificaciones']]
+    
+    # Contar la frecuencia de cada nota
+    contador = Counter(todas_las_notas)
+    
+    # Preparar los datos para el gráfico
+    notas = list(contador.keys())
     frecuencias = list(contador.values())
-   
-   # Configurar las características de la gráfica
-    plt.bar(notas_unicas, frecuencias)
+    
+    # Crear el gráfico de barras
+    plt.figure(figsize=(10, 6))
+    plt.bar(notas, frecuencias)
+    
+    # Personalizar el gráfico
+    plt.title('Distribución de Notas')
     plt.xlabel('Notas')
     plt.ylabel('Frecuencia')
-    # Configurar el título de la gráfica
-    plt.title('Distribución de Notas')
-    plt.xticks(notas_unicas)
-    plt.show() # muestra la gráfica luego de que ya se definieron todos los elementos
+    plt.xticks(range(min(notas), max(notas)+1))
+    
+    # Mostrar el gráfico
+    plt.show()
 
-# Ejemplo de uso:
-notas = [7, 8, 6, 9, 7, 8, 10, 6, 8, 7]
-grafico_barras_notas(notas)
+# Llamar a la función para crear el gráfico
+grafico_barras_notas(estudiantes)
