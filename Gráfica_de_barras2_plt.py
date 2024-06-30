@@ -36,7 +36,7 @@ def grafico_barras_estudiantes(estudiantes):
     plt.xlabel('Estudiantes')
     plt.ylabel('Calificaciones')
     plt.title('Calificaciones por Estudiante')
-    plt.xticks([r + ancho_barra*2 for r in range(len(nombres))], nombres, rotation=45, ha='right')
+    plt.xticks([r + ancho_barra*2 for r in range(len(nombres))], nombres, ha='right')
 
     # Añadir una leyenda
     plt.legend()
