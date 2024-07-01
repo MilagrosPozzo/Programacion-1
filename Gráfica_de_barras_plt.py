@@ -31,7 +31,7 @@ def control_promedio_notas_estudiantes(estudiantes):
     plt.figure(figsize=(6, 6))
 
     # Creamos el gráfico de barras con colores personalizados
-    plt.bar(nombres, promedios, color=colores_hex[:len(estudiantes)])
+    plt.bar(nombres, promedios, color=colores_hex)
 
     # Personalizamos el gráfico
     plt.title('Control de Promedio de Notas de los Estudiantes')
