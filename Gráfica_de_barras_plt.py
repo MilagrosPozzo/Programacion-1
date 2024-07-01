@@ -28,7 +28,7 @@ def control_promedio_notas_estudiantes(estudiantes):
     colores_hex = ['#FFA07A', '#98FB98', '#87CEFA', '#DDA0DD', '#F0E68C']
 
     # Creamos una nueva figura con un tamaño específico
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(6, 6))
 
     # Creamos el gráfico de barras con colores personalizados
     plt.bar(nombres, promedios, color=colores_hex[:len(estudiantes)])
