@@ -58,3 +58,10 @@ class Grafo:
         print(f"Distancias desde el nodo '{nodo_origen}':")
         for nodo, distancia in distancias.items():
             print(f"Distancia a {nodo}: {distancia if distancia < sys.maxsize else 'infinito'}")
+            
+            
+            
+grafo = Grafo()
+grafo.agregar_nodo('A')  # Nodo A, índice 0
+grafo.agregar_nodo('X')  # Nodo X, índice 1 (nombre personalizado)
+grafo.agregar_nodo('B')  # Nodo B, índice 2
